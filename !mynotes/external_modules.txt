@@ -4,5 +4,6 @@ https://github.com/tmukherjee13/yii2-reverse-migration
 Команда
 yii migration/table <tablename1>,<tablename2>
 
+yii migration/table user,migration,language,tag,version,document_criticality,demand_style,document,demand,demand_tag
 
 2)
