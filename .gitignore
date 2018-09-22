@@ -37,4 +37,4 @@ phpunit.phar
 #uploaded images for users is not needed
 /frontend/web/upload
 
-/!mynotes
+#/!mynotes

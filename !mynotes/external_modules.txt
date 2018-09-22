@@ -1,0 +1,7 @@
+1)
+Создание миграций на основе таблиц БД
+https://github.com/tmukherjee13/yii2-reverse-migration
+Команда
+yii migration/table <tablename1>,<tablename2>
+
+2)
