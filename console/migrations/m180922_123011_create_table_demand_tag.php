@@ -14,7 +14,7 @@ class m180922_123011_create_table_demand_tag extends Migration
     {
         $this->createTable('{{%demand_tag}}', [
 
-            'id' => $this->integer(11)->notNull(),
+            'id' => $this->primaryKey(),
             'fk_tag' => $this->integer(11)->notNull(),
             'fk_demand' => $this->integer(11)->notNull(),
 

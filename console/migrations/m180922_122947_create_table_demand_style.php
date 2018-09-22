@@ -14,7 +14,7 @@ class m180922_122947_create_table_demand_style extends Migration
     {
         $this->createTable('{{%demand_style}}', [
 
-            'id' => $this->integer(11)->notNull(),
+            'id' => $this->primaryKey(),
             'level' => $this->integer(11)->notNull(),
             'css_classes' => $this->string(100),
 

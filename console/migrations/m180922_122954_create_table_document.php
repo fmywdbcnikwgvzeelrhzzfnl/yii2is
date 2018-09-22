@@ -14,7 +14,7 @@ class m180922_122954_create_table_document extends Migration
     {
         $this->createTable('{{%document}}', [
 
-            'id' => $this->integer(11)->notNull(),
+            'id' => $this->primaryKey(),
             'num' => $this->string(20),
             'date' => $this->datetime(),
             'name' => $this->string(1000),

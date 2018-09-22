@@ -14,7 +14,7 @@ class m180922_123003_create_table_demand extends Migration
     {
         $this->createTable('{{%demand}}', [
 
-            'id' => $this->integer(11)->notNull(),
+            'id' => $this->primaryKey(),
             'uid' => $this->integer(11)->notNull(),
             'name' => $this->string(1000)->comment("Формулировка требования"),
             'comment' => $this->string(1000)->comment("Комментарий"),
@@ -79,8 +79,7 @@ class m180922_123003_create_table_demand extends Migration
             '{{%demand}}',
             'fk_language',
             '{{%language}}',
-            'id',
-            'CASCADE'
+            'id'
         );
 
         // creates index for column `fk_parent`
@@ -90,14 +89,19 @@ class m180922_123003_create_table_demand extends Migration
             'fk_parent'
         );
 
+        $this->createIndex(
+            'uid',
+            '{{%demand}}',
+            'uid'
+        );
+
         // add foreign key for table `demand`
         $this->addForeignKey(
             'demand_parent',
             '{{%demand}}',
             'fk_parent',
             '{{%demand}}',
-            'uid',
-            'CASCADE'
+            'uid'
         );
 
         // creates index for column `updated_by`

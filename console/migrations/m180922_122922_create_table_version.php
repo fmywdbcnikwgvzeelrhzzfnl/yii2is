@@ -14,7 +14,7 @@ class m180922_122922_create_table_version extends Migration
     {
         $this->createTable('{{%version}}', [
 
-            'id' => $this->integer(11)->notNull(),
+            'id' => $this->primaryKey(),
             'num' => $this->string(10)->comment("Номер"),
             'name' => $this->string(100)->comment("Название"),
             'description' => $this->string(1000)->comment("Описание"),

@@ -14,7 +14,7 @@ class m180922_122933_create_table_document_criticality extends Migration
     {
         $this->createTable('{{%document_criticality}}', [
 
-            'id' => $this->integer(11)->notNull(),
+            'id' => $this->primaryKey(),
             'name' => $this->string(20)->notNull(),
 
         ]);

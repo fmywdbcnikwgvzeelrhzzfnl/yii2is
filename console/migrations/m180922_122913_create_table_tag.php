@@ -14,7 +14,7 @@ class m180922_122913_create_table_tag extends Migration
     {
         $this->createTable('{{%tag}}', [
 
-            'id' => $this->integer(11)->notNull(),
+            'id' => $this->primaryKey(),
             'name' => $this->string(20),
             'color' => $this->string(6),
             'ord' => $this->integer(11),
