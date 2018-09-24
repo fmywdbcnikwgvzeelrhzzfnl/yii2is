@@ -10,6 +10,7 @@ use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
 use frontend\assets\AppAsset;
 use common\widgets\Alert;
+use yii\widgets\Menu;
 
 AppAsset::register($this);
 ?>
@@ -39,9 +40,15 @@ AppAsset::register($this);
     if (Yii::$app->user->isGuest) {
         $menuItems[] = ['label' => 'Signup', 'url' => ['/site/signup']];
         $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => 'Требования', 'items' => [
+            ['label' => /*Html::img('test.jpg').*/'Выставить', 'url' => ['/demand/index']],
+            ['label' => 'Корректировать', 'url' => ['/demand/modify']],
+            ['label' => 'Проверить выполнение', 'url' => ['/demand/check']],
+        ]]; 
     } else {
         $menuItems = [
             //['label' => 'Users', 'url' => ['/users']],
+
             ['label' => 'Projects', 'url' => ['/projects']],
             ['label' => 'Tasks', 'url' => ['/tasks']],
             ['label' => 'Profile', 'url' => ['/user/profile']],

@@ -1,5 +1,6 @@
 <?php
 return [
+    'name'=>'TEST IS APP', //наименование приложения
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
         '@npm' => '@vendor/npm-asset',
